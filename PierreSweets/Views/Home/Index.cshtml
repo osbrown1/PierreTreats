@@ -4,13 +4,13 @@
 
 @using PierreSweets.Models;
 
-<h1>Welcome to Pierre's Sweet and Savory Treats!</h1>
+<h1>Pierre's Sweet and Savory Treats!</h1>
 
 <hr>
 
 @if (User.Identity.IsAuthenticated)
 {
-  <h4>Treats for @User.Identity.Name</h4>
+  <h4>Treats for: @User.Identity.Name</h4>
   @if (Model["treats"].Length == 0)
   {
     <p>No treats have been added yet!</p>

@@ -1,0 +1,127 @@
+/* Set background color to a light pastel color */
+body {
+  background-image: url('https://images.unsplash.com/photo-1536570511323-26886612b4b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2017&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  color: #fff5d5;
+  text-shadow: 2px 2px 2px #ff69b4, -2px -2px 2px #00bfff;
+}
+
+/* heading style */
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 3px 3px 0px #f44336;
+  color: #ffeb3b;
+  margin: 0;
+}
+
+/* navigation bar style */
+nav {
+  background-color: #f44336;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+nav a {
+  color: #f8dede;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.5em;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #f44336;
+}
+
+/* main section style */
+main {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* product card style */
+.card {
+  width: 30%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(17, 17, 17, 0.5);
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #f44336;
+  text-shadow: 2px 2px 0px #fff;
+}
+
+.card img {
+  width: 70%;
+  margin: 20px 0;
+}
+
+.card p {
+  font-size: 1.2em;
+  color: #f3d3d3;
+  line-height: 1.5;
+}
+
+.card button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.card button:hover {
+  background-color: #fff;
+  color: #f44336;
+}
+
+/* footer style */
+footer {
+  background-color: #f44336;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 90%;
+  }
+}
+
+div#footer {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width:100%;
+  color:rgb(21, 215, 215);
+  background: rgb(35, 59, 59);
+  padding:8px;
+}
