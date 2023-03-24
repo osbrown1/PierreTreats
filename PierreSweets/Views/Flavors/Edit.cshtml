@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+
+@model PierreSweets.Models.Flavor
+
+<h2>Edit</h2>
+
+<h4>Edit this flavor: @Html.DisplayFor(model => model.Description)</h4>
+<h4>Edit this flavor: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.FlavorId)
+
+    @Html.LabelFor(model => model.Treat)
+    @Html.EditorFor(model => model.Treat)
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>
