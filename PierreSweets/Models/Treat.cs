@@ -9,7 +9,6 @@ namespace PierreSweets.Models
     [Required(ErrorMessage = "The treats's description can't be empty!")]
     public string Name {get; set;}
     public string Description { get; set; }
-    [Range(1, int.MaxValue, ErrorMessage = "You must add your item to a category. Have you created a category yet?")]
     public List<TreatFlavor> JoinEntities { get;}
     public ApplicationUser User { get; set; }
   }
