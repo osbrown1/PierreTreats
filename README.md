@@ -14,13 +14,14 @@
 
 ## Description
 A website with user authorization that lets a patron browse treats and their flavors, and lets those authorized edit available products.
-### Setup Instructions
+
+### Setup Instructions...
 
 #### You Will Need: 
 
 * A code editor, like VS Code
 * Git installed
-* Install .Net6 SDK
+* .Net6 SDK installed
 * MySql Workbench installed
 
 #### Database Migrations:
