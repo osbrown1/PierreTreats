@@ -1,4 +1,4 @@
-namespace YourNamespace.Models
+namespace PierreSweets.Models
 {
     public class TreatFlavor
     {
