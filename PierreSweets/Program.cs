@@ -1,29 +1,59 @@
-// using Microsoft.AspNetCore.Builder;
-// using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using PierreSweets.Models;
+using Microsoft.AspNetCore.Identity;
 
-// namespace ProjectName
-// {
-//   class Program
-//   {
-//     static void Main(string[] args)
-//     {
-//       WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+namespace PierreSweets
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
 
-//       builder.Services.AddControllersWithViews();
+      WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
-//       WebApplication app = builder.Build();
+      builder.Services.AddControllersWithViews();
 
-//       // app.UseDeveloperExceptionPage();
-//       app.UseHttpsRedirection();
+      builder.Services.AddDbContext<PierreSweetsContext>(
+                        dbContextOptions => dbContextOptions
+                          .UseMySql(
+                            builder.Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(builder.Configuration["ConnectionStrings:DefaultConnection"]
+                          )
+                        )
+                      );
+      
+      builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<PierreSweetsContext>()
+                .AddDefaultTokenProviders();
 
-//       app.UseRouting();
+      // builder.Services.Configure<IdentityOptions>(options =>
+      // {
+      //   options.Password.RequireDigit = false;
+      //   options.Password.RequireLowercase = false;
+      //   options.Password.RequireNonAlphanumeric = false;
+      //   options.Password.RequireUppercase = false;
+      //   options.Password.RequiredLength = 0;
+      //   options.Password.RequiredUniqueChars = 0;
+      // });
 
-//       app.MapControllerRoute(
-//         name: "default",
-//         pattern: "{controller=Home}/{action=Index}/{id?}"
-//       );
+      WebApplication app = builder.Build();
 
-//       app.Run();
-//     }
-//   }
-// }
+      // app.UseDeveloperExceptionPage();
+      app.UseHttpsRedirection();
+      app.UseStaticFiles();
+
+      app.UseRouting();
+
+      app.UseAuthentication(); 
+      app.UseAuthorization();
+
+      app.MapControllerRoute(
+          name: "default",
+          pattern: "{controller=Home}/{action=Index}/{id?}"
+        );
+
+      app.Run();
+    }
+  }
+}
