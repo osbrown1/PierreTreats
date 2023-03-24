@@ -11,6 +11,7 @@ using System.Security.Claims;
 
 namespace PierreSweets.Controllers
 {
+  [Authorize]
   public class FlavorsController : Controller
   {
     private readonly PierreSweetsContext _db;
