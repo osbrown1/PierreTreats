@@ -29,7 +29,7 @@ nav {
 }
 
 nav a {
-  color: #f8dede;
+  color: #f0bebe;
   font-size: 2em;
   font-weight: bold;
   text-transform: uppercase;
@@ -40,7 +40,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #fff;
+  background-color: #f9ecec;
   color: #f44336;
 }
 
@@ -56,7 +56,7 @@ main {
   width: 30%;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px rgba(17, 17, 17, 0.5);
+  box-shadow: 5px 5px 10px rgba(12, 12, 12, 0.5);
   margin: 30px;
   padding: 20px;
   text-align: center;
@@ -124,4 +124,8 @@ div#footer {
   color:rgb(21, 215, 215);
   background: rgb(35, 59, 59);
   padding:8px;
+}
+
+input[type="submit"].btn.btn-default {
+  color: rgb(232, 232, 244);
 }
