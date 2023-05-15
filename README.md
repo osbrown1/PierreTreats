@@ -53,7 +53,7 @@ A website with user authorization that lets a patron browse treats and their fla
 
 ## Known Bugs
 
-Internal server errors display when attempting to enter empty flavor or treat
+None.
 
 ## License
 Enjoy the site! If you have questions or suggestions for fixing the code, please contact me!
